@@ -54,13 +54,16 @@ nav a.current { /* current class is used on the navigation tab corresponding to 
 }
 
 /* formating for main content */
+
 .content {
-  border-radius: 10px;
-  margin: 2em;
   padding: 1em;
+  margin: 2em;
+  border-radius: 10px;
   background-color: whitesmoke;
   position: absolute;
   top: 3em;
+  left: 0;
+  right: 0;
   z: 1;
 
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* settings for box shadow taken from w3 schools - https://www.w3schools.com/css/css3_shadows_box.asp */
