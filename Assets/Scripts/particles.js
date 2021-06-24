@@ -1,10 +1,15 @@
+var footer = document.getElementsByTagName("footer");
+var nav = document.getElementById("nav");
+var foot = document.getElementById("foot");
+
 var canvas = document.getElementById("perlin");
 var ctx = canvas.getContext("2d");
 
-canvas.width = 200;
-canvas.height = 200;
 
-const nparticles = 5000; 
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight-nav.clientHeight-48;
+console.log(footer[0],foot)
+const nparticles = 10000; 
 var scl = 50;    /* size of the perlin grid */
 var fldStr = 0.4; /* amount the particles should move each frame (in pixels)*/
 let field = [];
