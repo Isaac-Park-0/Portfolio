@@ -1,4 +1,4 @@
-body {
+* {
 	margin: 0;
 	padding: 0;
 	font-family: arial;
@@ -54,6 +54,11 @@ nav a.current { /* current class is used on the navigation tab corresponding to 
 }
 
 /* formating for main content */
+a {
+  color: #e1d0a1;
+  text-decoration: none;
+}
+
 
 .content {
   padding: 1em;
@@ -69,14 +74,41 @@ nav a.current { /* current class is used on the navigation tab corresponding to 
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* settings for box shadow taken from w3 schools - https://www.w3schools.com/css/css3_shadows_box.asp */
 }
 
-/* setup canvas as background */
-.backgorund {
-  height: 100%;
+header {
+  height: 5em;
   width: 100%;
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+}
+
+.backgorund {/* setup canvas as background */
+  height: 5em;
+  width: 5em;
   position: absolute;
   top: 0;
   left: 0;
   z: -100;
+}
+
+
+#profilePic {/* Setup the profile pic as a circular badge */
+  display: inline;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5em;
+  height: 5em;
+  object-fit: cover;
+  object-position: 0 -10%;
+  border-radius: 50%;/* from w3schools https://www.w3schools.com/howto/howto_css_rounded_images.asp*/
+  /*border: 0.3em solid #333;*/
+  /*pagging: 0.3em;
+  background-color: linear-gradient(#e66465, #9198e5);*/
+  box-shadow: 0px 0px 10px 1px #e1d0a1;
+  grid-column-start: 5em;
 }
 
 /* edit the canvas */
@@ -89,10 +121,36 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 3em;
+  height: 4em;
   background-color: #22303d/*#242323*/;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: auto auto;
   align-items: center;
+  text-align: center;
   color:  #e1d0a1;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+footer li {
+  display: inline;
+}
+
+.contactIcon {
+  width: 2em;
+  height: 2em;
+}
+
+#email:hover {
+  content: url("../Images/email_hover.svg");
+}
+
+#github:hover {
+  content: url("../Images/github_hover.svg");
+}
+
+#linkedIn:hover {
+  content: url("../Images/linkedin_hover.svg");
 }

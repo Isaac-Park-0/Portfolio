@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.0"
+   width="961.000000pt"
+   height="960.000000pt"
+   viewBox="0 0 961.000000 960.000000"
+   preserveAspectRatio="xMidYMid meet"
+   id="svg6"
+   sodipodi:docname="email_hover.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs10" />
+  <sodipodi:namedview
+     id="namedview8"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="pt"
+     showgrid="false"
+     inkscape:zoom="0.65"
+     inkscape:cx="640"
+     inkscape:cy="640"
+     inkscape:window-width="1271"
+     inkscape:window-height="1040"
+     inkscape:window-x="759"
+     inkscape:window-y="202"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg6" />
+  <g
+     transform="translate(0.000000,960.000000) scale(0.100000,-0.100000)"
+     fill="#000000"
+     stroke="none"
+     id="g4"
+     style="fill:#0048c6;fill-opacity:1">
+    <path
+       d="M4420 9579 c-837 -71 -1606 -338 -2290 -797 -980 -657 -1686 -1657 -1975 -2797 -112 -444 -151 -792 -142 -1289 5 -312 17 -449 62 -718 200 -1185 862 -2271 1830 -3004 1063 -804 2412 -1128 3735 -898 867 151 1658 531 2325 1115 1356 1188 1927 3030 1485 4789 -372 1483 -1452 2714 -2875 3278 -448 178 -894 281 -1390 322 -139 11 -626 11 -765 -1z m2685 -3036 c-2121 -2101 -2039 -2021 -2107 -2053 -133 -62 -271 -60 -408 7 -72 35 -116 78 -1295 1250 -671 668 -1221 1218 -1223 1224 -2 5 1032 9 2735 9 l2738 -1 -440 -436z m-4172 -2261 c-285 -282 -688 -680 -895 -884 l-378 -370 0 1772 0 1772 896 -889 895 -888 -518 -513z m5017 517 c0 -992 -4 -1769 -9 -1767 -19 7 -1781 1753 -1779 1763 3 11 1775 1775 1783 1775 3 0 5 -797 5 -1771z m-3750 -731 c312 -218 720 -250 1062 -82 118 58 179 104 335 257 l151 149 895 -884 896 -883 -1364 -3 c-750 -1 -1981 -1 -2736 0 l-1373 3 894 883 894 882 140 -138 c78 -76 170 -159 206 -184z"
+       id="path2"
+       style="fill:#0048c6;fill-opacity:1" />
+  </g>
+</svg>
