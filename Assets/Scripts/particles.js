@@ -140,6 +140,7 @@ class Particle {
 		ctx.moveTo(this.prevx,this.prevy);
 		ctx.lineTo(this.x,this.y);
 		ctx.stroke();
+		ctx.closePath();
 	}
 }
 
