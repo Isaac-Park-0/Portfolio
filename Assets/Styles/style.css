@@ -57,6 +57,7 @@ nav a.current { /* current class is used on the navigation tab corresponding to 
 body {
   background-color: #333;
 }
+
 .content {
   display: grid;
   grid-template-columns: 75% 25%;
@@ -72,6 +73,10 @@ body {
   z: 1;
 
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* settings for box shadow taken from w3 schools - https://www.w3schools.com/css/css3_shadows_box.asp */
+}
+
+main {
+  height: 100%;
 }
 
 header {
@@ -130,8 +135,8 @@ header {
   transform: translate(-50%);
 }
 
-.timeline::after {/* this pseudo-element forms the sctive line, and just sits above the before psudeo element */
-  content: '';
+/*.timeline::after {/* this pseudo-element forms the active line, and just sits above the before psudeo element */
+/*  content: '';
   position: absolute;
   top: 0;
   left: 1em;
@@ -141,7 +146,7 @@ header {
   margin-right: 0em;
   transform: translate(-50%);
   z-index: 1;
-}
+}*/
 
 .timeline {
   margin-top: 2em;
@@ -166,8 +171,8 @@ header {
   z-index: 2;
 }
 
-.timelineEntry.active::before {/* this pseudo-element forms the colored dots in each active entry in timeline */
-  content: '';
+/*.timelineEntry.active::before {/* this pseudo-element forms the colored dots in each active entry in timeline */
+/*  content: '';
   position: absolute;
   left: 1em;
   transform: translate(-50%);
@@ -178,13 +183,14 @@ header {
   border-radius: 50%;
   height: 0.5em;
   width: 0.5em;
-}
+}*/
 
 .timelineEntry {
   color: #fff;
   margin-bottom: 1em;
   margin-left: 0.5em;
   max-width: 50em;
+  cursor: pointer;
 }
 
 .timelineEntry:last-child {/* remove the bottom padding from the last entry */
@@ -216,6 +222,10 @@ header {
 }
 
 .timelineBody {
+  display: none;
+}
+
+.timelineBody:hover {
   display: none;
 }
 
