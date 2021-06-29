@@ -54,14 +54,16 @@ nav a.current { /* current class is used on the navigation tab corresponding to 
 }
 
 /* formating for main content */
-
+body {
+  background-color: #333;
+}
 .content {
   display: grid;
   grid-template-columns: 75% 25%;
   padding: 1em;
   margin: 2em;
   border-radius: 10px;
-  background-color: #e9ecf0;
+  background-color: #fff;
   /*background-color: #e9ecf0;*/
   position: absolute;
   top: 3em;
@@ -86,15 +88,22 @@ header {
 }*/
 
 #profilePic { /* Setup the profile pic as a circular badge */
+  position: relative;
+  top: 0em;
+  left: 0em;
+  width: 5em;
+  height: 5em;
+  object-fit: cover;
+  object-position: 0 -10%;
+  border-radius: 50%;
+  border: 0.1em solid #666;
+}
+
+#displayPic { /* Setup the main picture on the index page */
   top: 1em;
   left: 1em;
   width: 100%;
-  /*object-fit: cover;
-  object-position: 0 -10%;
-  border-radius: 50%;*/
-  /*border: 0.3em solid #333;*/
-  /*padding: 0.3em;
-  background-color: linear-gradient(#e66465, #9198e5);*/
+  height: auto;
   box-shadow: 0px 0px 10px 1px #e9ecf0;
 }
 
@@ -109,26 +118,101 @@ header {
   background-color: #fca311;
 }
 
-/* Setup the classes for the timeline */
-.timeline::before {
+/* Setup the classes for the timeline (based off of code from https://freefrontend.com/css-timelines/)*/
+.timeline::before {/* this pseudo-element forms the line, and just sits left of all the timeline entries */
   content: '';
   position: absolute;
   left: 1em;
-  background-color: #333;
-  width: 0.1em;
+  background-color: #fdfdfd;
+  width: 4px;
   height: 100%;
+  margin-right: 0em;
+  transform: translate(-50%);
+}
+
+.timeline::after {/* this pseudo-element forms the sctive line, and just sits above the before psudeo element */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 1em;
+  background-color: #fca311;
+  width: 4px;
+  height: 25%;
+  margin-right: 0em;
+  transform: translate(-50%);
+  z-index: 1;
 }
 
 .timeline {
-  padding-left: 1em;
+  margin-top: 2em;
+  padding-left: 2em;
+  height: 100%;
+  position: relative;
+  background-color: #333;
+}
+
+.timelineEntry::before {/* this pseudo-element forms the dots next to each entry in timeline */
+  content: '';
+  position: absolute;
+  left: 1em;
+  transform: translate(-50%);
+  background-color: #333;
+  border-style: solid;
+  border-color: #fdfdfd;
+  border-width: 4px;
+  border-radius: 50%;
+  height: 0.5em;
+  width: 0.5em;
+  z-index: 2;
+}
+
+.timelineEntry.active::before {/* this pseudo-element forms the colored dots in each active entry in timeline */
+  content: '';
+  position: absolute;
+  left: 1em;
+  transform: translate(-50%);
+  background-color: #333;
+  border-style: solid;
+  border-color: #fca311;
+  border-width: 4px;
+  border-radius: 50%;
+  height: 0.5em;
+  width: 0.5em;
 }
 
 .timelineEntry {
-  background-color: #e9ecf0;
+  color: #fff;
+  margin-bottom: 1em;
+  margin-left: 0.5em;
+  max-width: 50em;
+}
+
+.timelineEntry:last-child {/* remove the bottom padding from the last entry */
+  margin-bottom: 0em;
+}
+
+.timelineEntry:last-child::after {/* this pseudo element renders the cap at the end of the timline */
+  content: '';
+  position: absolute;
+  left: 1em;
+  transform: translate(-50%);
+  border-style: solid;
+  border-color: #fdfdfd;
+  border-top-width: 2px;
+  border-bottom-width: 0;
+  height: 0;
+  width: 0.5em;
+}
+
+.timelineDate {
+  font-weight: bold;
+  font-size: 10pt;
+  margin-bottom: 0.5em;
 }
 
 .timelineTitle {
   font-weight: bold;
+  font-size: 15pt;
 }
 
 .timelineBody {
