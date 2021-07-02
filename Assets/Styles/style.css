@@ -44,7 +44,7 @@ nav a:hover {
   background-color: #444;
 }
 
-nav a.current { /* current class is used on the navigation tab corresponding to the current page */
+nav a.currentTab { /* currentTab class is used on the navigation tab corresponding to the currentTab page */
   border-bottom: solid 0.2em;
   border-color: #fca311;
   color:  #fca311;
@@ -58,11 +58,13 @@ body {
   background-color: #333;
 }
 
-.content {
+.contentIndex {
   display: grid;
+  float: none;
   grid-template-columns: 75% 25%;
   padding: 1em;
-  margin: 2em;
+  margin: 2em auto;
+  max-width: 50em;
   border-radius: 10px;
   background-color: #fff;
   /*background-color: #e9ecf0;*/
@@ -73,6 +75,20 @@ body {
   z: 1;
 
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* settings for box shadow taken from w3 schools - https://www.w3schools.com/css/css3_shadows_box.asp */
+}
+
+.content {
+  float: none;
+  padding: 1em;
+  margin: 2em auto;
+  max-width: 50em;
+  border-radius: 10px;
+  position: relative;
+  top: 3em;
+  left: 0;
+  right: 0;
+  z: 1;
+  color: white;
 }
 
 main {
@@ -123,11 +139,13 @@ header {
   background-color: #fca311;
 }
 
-/* Setup the classes for the timeline (based off of code from https://freefrontend.com/css-timelines/)*/
+  /*                                                                                                    */
+ /* Setup the classes for the timeline (based off of code from https://freefrontend.com/css-timelines/)*/
+/*                                                                                                    */
 .timeline::before {/* this pseudo-element forms the line, and just sits left of all the timeline entries */
   content: '';
   position: absolute;
-  left: 1em;
+  left: 5em;
   background-color: #fdfdfd;
   width: 4px;
   height: 100%;
@@ -150,16 +168,21 @@ header {
 
 .timeline {
   margin-top: 2em;
-  padding-left: 2em;
+  padding-left: 6em;
   height: 100%;
   position: relative;
+  left: 0;
+  top: 100px;
   background-color: #333;
+  width: auto;
+  margin-left: 0 auto;
+  margin-right: 0 auto;
 }
 
 .timelineEntry::before {/* this pseudo-element forms the dots next to each entry in timeline */
   content: '';
   position: absolute;
-  left: 1em;
+  left: 5em;
   transform: translate(-50%);
   background-color: #333;
   border-style: solid;
@@ -188,7 +211,6 @@ header {
 .timelineEntry {
   color: #fff;
   margin-bottom: 1em;
-  margin-left: 0.5em;
   max-width: 50em;
   cursor: pointer;
 }
@@ -200,7 +222,7 @@ header {
 .timelineEntry:last-child::after {/* this pseudo element renders the cap at the end of the timline */
   content: '';
   position: absolute;
-  left: 1em;
+  left: 5em;
   transform: translate(-50%);
   border-style: solid;
   border-color: #fdfdfd;
@@ -213,7 +235,7 @@ header {
 .timelineDate {
   font-weight: bold;
   font-size: 10pt;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.3em;
 }
 
 .timelineTitle {
@@ -223,10 +245,11 @@ header {
 
 .timelineBody {
   display: none;
-}
-
-.timelineBody:hover {
-  display: none;
+  max-width: 35em;
+  background-color: #252525;
+  padding: 1em;
+  margin-top: 0.25em;
+  border-radius: 0.5em;
 }
 
 /* edit the canvas */
