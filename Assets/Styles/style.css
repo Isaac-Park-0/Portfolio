@@ -61,6 +61,16 @@ body {
   background-color: #333;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
+header { /* this is for the titles on each page */
+  height: 3em;
+  text-align: center;
+}
+
 .contentIndex {/* This class is for the main content in the middle of the home page */
   display: grid;
   float: none;
@@ -105,11 +115,6 @@ body {
   color: white;
 }
 
-header { /* this is for the titles on each page */
-  height: 3em;
-  text-align: center;
-}
-
 .title { /* this is needed to center align the titles on the contact and about pages */
   text-align: center;
 }
@@ -124,6 +129,11 @@ header { /* this is for the titles on each page */
   border-radius: 50%;
   margin-right: 1em;
   transform: translateY(25%);
+}
+
+.contactTitle { /* the contact details are presented in a table, this class is used on the left column */
+  font-weight: bold;
+  padding-right: 1em;
 }
 
   /*                                                        */

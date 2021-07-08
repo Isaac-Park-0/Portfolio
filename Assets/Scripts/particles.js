@@ -9,24 +9,35 @@ var ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight-nav.clientHeight-48;
 console.log(footer[0],foot)
-const nparticles = 10000; 
-var scl = 50;    /* size of the perlin grid */
-var fldStr = 0.4; /* amount the particles should move each frame (in pixels)*/
-let field = [];
-field.push(generateRandomArray()); /* This initialises the field at t=0 */
-field.push(generateRandomArray()); /* This initialises the target field for t=1 */
+
+function init3darray() {
+	field = []
+	field.push(generateRandomArray()); /* This initialises the field at t=0 */
+	field.push(generateRandomArray()); /* This initialises the target field for t=1 */
+}
+
+window.addEventListener('resize', resizeCanvas, false); /* we want to resize the canvas every time the window is resized */
+
+function resizeCanvas() {
+	window.cancelAnimationFrame(currentid);// cancel animating our curretnt frame, this will alos stop the function from threading, so we can call animate again later
+	canvas.width = window.innerWidth;
+	canvas.height = window.innerHeight-nav.clientHeight-48;
+	init3darray(); // setup a new array
+	initParticles(); // setup a new set of particles
+	animate(); // Redraw everything after resizing the window
+}
 
 function generateRandomArray() {
-	let field = [];
+	let arr = [];
 	for ( y = 0; y <= Math.ceil(canvas.height/scl); y++) {
 		let row=[];
 			for ( x = 0; x <= Math.ceil(canvas.width/scl); x++) {
 				theta = Math.random()*2*Math.PI;
 				row.push(theta);
 			}
-		field.push(row);
+		arr.push(row);
 	}
-	return field
+	return arr
 }
 
 function getUnitVectorFromAngle(theta){
@@ -145,14 +156,14 @@ class Particle {
 }
 
 /* animate the canvas and draw the particles */
-let particles = [];
-for(i=0; i<nparticles; i++) {
-	particles.push(new Particle(Math.random()*canvas.width,Math.random()*canvas.height));
-	//particles.push(new Particle((canvas.width/nparticles)*i,canvas.height/2));
+function initParticles() {
+	particles = [];
+	for(i=0; i < nparticles; i++) {
+		particles.push(new Particle(Math.random()*canvas.width,Math.random()*canvas.height));
+	}
+	t=0;
+	ProgressGradientBackwards=0;
 }
-var t=0;
-let ProgressGradientBackwards=0;
-ctx.lineWidth = 1;
 
 function animate() {
 	ctx.fillStyle='rgba(33,33,33,0.01)';
@@ -171,8 +182,15 @@ function animate() {
 			ProgressGradientBackwards=0;
 		}
 	}
-	requestAnimationFrame(animate);
+	currentid = requestAnimationFrame(animate);
 }
+
+ctx.lineWidth = 1;
+const nparticles = 10000; 
+var scl = 50;    /* size of the perlin grid */
+var fldStr = 0.4; /* amount the particles should move each frame (in pixels)*/
+init3darray();
+initParticles();
 animate();
 
 /* some useful code to visualise the perlin noise */
@@ -251,10 +269,10 @@ setInterval(function(){
 var t=0;
 const resolution=10;
 setInterval(function(){
-									ctx.clearRect(0, 0, canvas.width, canvas.height);
-									drawFlowField(resolution, t, 5);
-									t+=0.1;
-									if(t>1) {
-										t=updateField();
-									};
-								},100);*/
+					ctx.clearRect(0, 0, canvas.width, canvas.height);
+					drawFlowField(resolution, t, 5);
+					t+=0.1;
+					if(t>1) {
+						t=updateField();
+					};
+				},100);*/
