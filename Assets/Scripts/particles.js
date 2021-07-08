@@ -19,7 +19,7 @@ function init3darray() {
 window.addEventListener('resize', resizeCanvas, false); /* we want to resize the canvas every time the window is resized */
 
 function resizeCanvas() {
-	window.cancelAnimationFrame(currentid);// cancel animating our curretnt frame, this will alos stop the function from threading, so we can call animate again later
+	window.cancelAnimationFrame(currentid); // cancel animating our curretnt frame, this will alos stop the function from threading, so we can call animate again later
 	canvas.width = window.innerWidth;
 	canvas.height = window.innerHeight-nav.clientHeight-48;
 	init3darray(); // setup a new array
