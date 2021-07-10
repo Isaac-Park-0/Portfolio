@@ -195,7 +195,7 @@ header { /* this is for the titles on each page */
   margin-left: 0em;
 }
 
-.timelineEntry::before {/* this pseudo-element forms the dots next to each entry in timeline */
+.timelineHeader::before {/* this pseudo-element forms the dots next to each entry in timeline */
   content: '';
   position: absolute;
   left: 5em;
@@ -208,6 +208,14 @@ header { /* this is for the titles on each page */
   height: 0.5em;
   width: 0.5em;
   z-index: 2;
+}
+
+.timelineHeader:hover {
+  color: #fca311;
+}
+
+.timelineHeader:hover::before {
+  border-color: #fca311;
 }
 
 /*.timelineEntry.active::before {/* this pseudo-element forms the colored dots in each active entry in timeline */
@@ -225,6 +233,12 @@ header { /* this is for the titles on each page */
 }*/
 
 .timelineEntry {
+  color: #fff;
+  margin-bottom: 1em;
+  cursor: pointer;
+}
+
+.timelineEntry::before {
   color: #fff;
   margin-bottom: 1em;
   cursor: pointer;

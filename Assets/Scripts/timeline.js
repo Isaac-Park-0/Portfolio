@@ -13,17 +13,26 @@ for(i=0; i < timelineEntries.length; i++) {/* loop through every entry we have i
 
 function updateContentDisplay(activeIndex) {
 	for(i=0; i < timelineEntries.length; i++) {
-		console.log(timelineEntries[i].childNodes[5].style.display);
-		if(activeIndex==i) { /* activeIndex tells us the index of the element that was clicked on os when activeIndex==i, we want to show the description (.childNode[5]) for that entry */
-			if(timelineEntries[i].childNodes[5].style.display=="none") { /* check if the object is already displayed or not */
-				timelineEntries[i].childNodes[5].style.display="block";/* display the timeline entry that was clicked on */
+		child = findChildNodeByClassName(timelineEntries[i], "timelineBody");
+		if(activeIndex==i) { /* activeIndex tells us the index of the element that was clicked on. If activeIndex==i, we want to show the description. */
+			if(child.style.display=="none") { /* check if the object is already displayed or not */
+				child.style.display="block";/* display the timeline entry that was clicked on */
 			}
 			else {
-				timelineEntries[i].childNodes[5].style.display="none"; /* if the object was displayed when it was click on we wnat to hide it instead*/
+				child.style.display="none"; /* if the object was displayed when it was click on we want to hide it instead*/
 			}; 
 		}
 		else {
-			timelineEntries[i].childNodes[5].style.display="none"; /* hide timeline entries that weren't clicked on */
+			child.style.display="none"; /* hide timeline entries that weren't clicked on */
 		}
 	}
+}
+
+function findChildNodeByClassName(parentElement, className){
+	for(var i=0; i < parentElement.childNodes.length; i++) {
+		if(parentElement.childNodes[i].className == className) {
+			return parentElement.childNodes[i];
+		}
+	}
+	console.log("Element with class '"+className+"' not found in element: "+parentElement);
 }
