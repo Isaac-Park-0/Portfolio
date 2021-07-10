@@ -71,7 +71,7 @@ header { /* this is for the titles on each page */
   text-align: center;
 }
 
-.contentIndex {/* This class is for the main content in the middle of the home page */
+.contentIndex { /* This class is for the main content in the middle of the home page */
   display: grid;
   float: none;
   grid-template-columns: 65% 35%;
@@ -90,7 +90,7 @@ header { /* this is for the titles on each page */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* settings for box shadow taken from w3 schools - https://www.w3schools.com/css/css3_shadows_box.asp */
 }
 
-#contentRight {/* this div contains the displayPic on the right side of the home page, and is used to position and size it */
+#contentRight { /* this div contains the displayPic on the right side of the home page, and is used to position and size it */
   padding-right: 3em;
   padding-top: 1em;
 }
@@ -139,7 +139,7 @@ header { /* this is for the titles on each page */
   /*                                                        */
  /* Setup the classes for the skills bars on the home page */
 /*                                                        */
-#skills {/* this formats the whole skills block-element*/
+#skills { /* this formats the whole skills block-element*/
   width: 100%;
   padding-left: 2em;
   padding-right: 8em;
@@ -160,29 +160,6 @@ header { /* this is for the titles on each page */
   /*                                                                                                    */
  /* Setup the classes for the timeline (based off of code from https://freefrontend.com/css-timelines/)*/
 /*                                                                                                    */
-.timeline::before {/* this pseudo-element forms the line, and just sits left of all the timeline entries */
-  content: '';
-  position: absolute;
-  left: 5em;
-  background-color: #fdfdfd;
-  width: 4px;
-  height: 100%;
-  margin-right: 0em;
-  transform: translate(-50%);
-}
-
-/*.timeline::after {/* this pseudo-element forms the active line, and just sits above the before psudeo element */
-/*  content: '';
-  position: absolute;
-  top: 0;
-  left: 1em;
-  background-color: #fca311;
-  width: 4px;
-  height: 25%;
-  margin-right: 0em;
-  transform: translate(-50%);
-  z-index: 1;
-}*/
 
 .timeline {
   margin-top: 2em;
@@ -195,10 +172,10 @@ header { /* this is for the titles on each page */
   margin-left: 0em;
 }
 
-.timelineHeader::before {/* this pseudo-element forms the dots next to each entry in timeline */
+.timelineHeader::before { /* this pseudo-element forms the dots next to each entry in timeline */
   content: '';
   position: absolute;
-  left: 5em;
+  left: -1em;
   transform: translate(-50%);
   background-color: #333;
   border-style: solid;
@@ -214,50 +191,62 @@ header { /* this is for the titles on each page */
   color: #fca311;
 }
 
+.timelineHeader.active:hover {/* we dont want to highlight the timeline element if its already selected, the active class is set in timeline.js*/
+  color: #fdfdfd;
+}
+
 .timelineHeader:hover::before {
   border-color: #fca311;
 }
 
-/*.timelineEntry.active::before {/* this pseudo-element forms the colored dots in each active entry in timeline */
-/*  content: '';
-  position: absolute;
-  left: 1em;
-  transform: translate(-50%);
-  background-color: #333;
-  border-style: solid;
-  border-color: #fca311;
-  border-width: 4px;
-  border-radius: 50%;
-  height: 0.5em;
-  width: 0.5em;
-}*/
+.timelineHeader.active:hover::before {/* we dont want to highlight the timeline element if its already selected, the active class is set in timeline.js*/
+  border-color: #fdfdfd;
+}
 
 .timelineEntry {
+  position: relative;
   color: #fff;
   margin-bottom: 1em;
   cursor: pointer;
 }
 
-.timelineEntry::before {
-  color: #fff;
-  margin-bottom: 1em;
-  cursor: pointer;
+.timelineEntry::before { /* this pseudo-element forms the line */
+  content: '';
+  position: absolute;
+  left: -1em;
+  bottom: -1em;/* each entry (except the last) has a 1em padding on the bottom */
+  background-color: #fdfdfd;
+  width: 4px;
+  margin-right: 0em;
+  transform: translate(-50%);
+  height: 100%;
 }
 
-.timelineEntry:last-child {/* remove the bottom padding from the last entry */
+.timelineEntry:hover::before {
+  background-color: #fca311;
+}
+
+.timelineEntry.active:hover::before { /* we dont want to highlight the timeline element if its already selected, the active class is set in timeline.js*/
+  background-color: #fdfdfd;
+}
+
+.timelineEntry:last-child { /* remove the bottom padding from the last entry */
   margin-bottom: 0em;
 }
 
-.timelineEntry:last-child::after {/* this pseudo element renders the cap at the end of the timline */
+.timelineEntry:last-child::before { /* the last entry doesn't have padding, so we don't need to extend the line */
+  bottom: 0em;
+}
+
+.timelineEntry:last-child::after { /* this pseudo-element renders the cap at the end of the timeline */
   content: '';
   position: absolute;
-  left: 5em;
+  left: -1em;
   transform: translate(-50%);
   border-style: solid;
   border-color: #fdfdfd;
   border-top-width: 2px;
   border-bottom-width: 0;
-  height: 0;
   width: 0.5em;
 }
 
