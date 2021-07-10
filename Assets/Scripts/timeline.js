@@ -13,17 +13,18 @@ for(i=0; i < timelineEntries.length; i++) {/* loop through every entry we have i
 
 function updateContentDisplay(activeIndex) {
 	for(i=0; i < timelineEntries.length; i++) {
-		child = findChildNodeByClassName(timelineEntries[i], "timelineBody");
-		if(activeIndex==i) { /* activeIndex tells us the index of the element that was clicked on. If activeIndex==i, we want to show the description. */
-			if(child.style.display=="none") { /* check if the object is already displayed or not */
-				child.style.display="block";/* display the timeline entry that was clicked on */
+		body = findChildNodeByClassName(timelineEntries[i], "timelineBody");
+		if(activeIndex==i) { /* activeIndex tells us the index of the element that was clicked on. If activeIndex==i, we want to show (or hide) the description. */
+			if(body.style.display=="block") { /* check if the object is already displayed or not */
+				body.style.display="none";/* hide the element if it is already showing */
 			}
 			else {
-				child.style.display="none"; /* if the object was displayed when it was click on we want to hide it instead*/
+				body.style.display="block"; /* if the object wasn't displayed when it was click on we want to show it */
 			}; 
+			//timelineEntries[i].classList.toggle("active");
 		}
 		else {
-			child.style.display="none"; /* hide timeline entries that weren't clicked on */
+			body.style.display="none"; /* hide timeline entries that weren't clicked on */
 		}
 	}
 }

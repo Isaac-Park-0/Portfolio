@@ -187,27 +187,19 @@ header { /* this is for the titles on each page */
   z-index: 2;
 }
 
-.timelineHeader:hover {
-  color: #fca311;
-}
-
-.timelineHeader.active:hover {/* we dont want to highlight the timeline element if its already selected, the active class is set in timeline.js*/
-  color: #fdfdfd;
-}
-
-.timelineHeader:hover::before {
-  border-color: #fca311;
-}
-
-.timelineHeader.active:hover::before {/* we dont want to highlight the timeline element if its already selected, the active class is set in timeline.js*/
-  border-color: #fdfdfd;
-}
-
 .timelineEntry {
   position: relative;
   color: #fff;
   margin-bottom: 1em;
   cursor: pointer;
+}
+
+.timelineEntry:hover {
+  color: #fca311;
+}
+
+.timelineEntry:hover .timelineBody {
+  color: #fdfdfd;
 }
 
 .timelineEntry::before { /* this pseudo-element forms the line */
@@ -222,12 +214,12 @@ header { /* this is for the titles on each page */
   height: 100%;
 }
 
-.timelineEntry:hover::before {
+.timelineEntry:hover::before { /* this pseudo-element forms the line */
   background-color: #fca311;
 }
 
-.timelineEntry.active:hover::before { /* we dont want to highlight the timeline element if its already selected, the active class is set in timeline.js*/
-  background-color: #fdfdfd;
+.timelineEntry:hover .timelineHeader::before { /* this changes the color of the dot when you hovber over the full entry */
+  border-color: #fca311;
 }
 
 .timelineEntry:last-child { /* remove the bottom padding from the last entry */
@@ -248,6 +240,10 @@ header { /* this is for the titles on each page */
   border-top-width: 2px;
   border-bottom-width: 0;
   width: 0.5em;
+}
+
+.timelineEntry:last-child:hover::after {
+  border-color: #fca311;
 }
 
 .timelineDate {
