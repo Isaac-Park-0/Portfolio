@@ -108,7 +108,6 @@ header { /* this is for the titles on each page */
   max-width: 50em;
   border-radius: 10px;
   position: relative;
-  top: 0;
   left: 0;
   right: 0;
   z: 1;
