@@ -91,18 +91,17 @@ nav li:nth-of-type(3):hover ~ #navUnderline {
   /*                         */
  /* format the main content */
 /*                         */
-main {
+
+html, body {
   height: 100%;
 }
 
-body {
-  min-height: 100%;
+main {
   background-color: #d7d8d3;
 }
 
-.background {
+.background, .background img {
   height: 100%;
-  width: auto;
 }
 
 a {
@@ -317,11 +316,15 @@ header { /* this is for the titles on each page */
   /*                      */
  /* formating the footer */
 /*                      */
+
+body {
+  display: grid;
+  grid-template-rows: auto 4em;/* a grid template is use to make sure the body takes up at least 1vh. the last number set sthe height of the footer */
+}
+
 footer {
-  position: fixed;
-  bottom: 0;
   width: 100%;
-  height: 4em;
+  height: auto;
   background-color: #242323/*#242323*/;
   display: grid;
   align-items: center;
