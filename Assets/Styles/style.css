@@ -144,19 +144,6 @@ span.right {
   height: 100%;
 }
 
-/*.content { /* defines the content formatting for the about and contact pages */
-/*  float: none;
-  padding: 1em;
-  margin: 2em auto;
-  max-width: 50em;
-  border-radius: 10px;
-  position: relative;
-  left: 0;
-  right: 0;
-  z: 1;
-  color: #232323;
-}*/
-
 .title { /* this is needed to center align the titles on the contact and about pages */
   text-align: center;
 }
@@ -178,7 +165,7 @@ span.right {
 /*                                            */
 
 #contact { /* this id refernces the table containing the contact details */
-  border-spacing: 0 6em;
+  border-spacing: 0 6em; /* add large spacing between rows */
 }
 
 .contactTitle { /* the contact details are presented in a table, this class is used on the left column */
@@ -186,13 +173,127 @@ span.right {
   border-collapse: separate;
 }
 
+.contactIcon {
+  padding-right: 1em; /* add some spacing between the icon and the title, that can still be clicked on */
+}
+  /*                                                                                                                 */
+ /* Setup the email Icon and its animation - based off of code from https://codepen.io/jakegilesphillips/pen/MveNLe */
+/*                                                                                                                 */
+
+#emailIcon {
+  position: relative;
+  top: 0; /* set a default value to animate from */
+  height: 35px;
+  width: 50px;
+  margin: 0 auto; /* with a defined height and width this will center the div */
+  background-color: #333;
+}
+
+/* ids below are for the envelope, and are heavily edited from the source*/
+#envelopeBody {
+  position: relative; /* we need a position for z-index to work */
+  height: 0;
+  width: 0;
+  border-style: solid;
+  border-width: 17.5px 25px 17.5px 25px; /* top right bottom left */
+  border-color: transparent #e15349 #e15349 #e15349; /* top right bottom left */
+  z-index: 2; /* we want this to render infront of the page */
+}
+
+#topFold {
+  position: relative;
+  top: -35px; /* the #envelopeBody div pushes this div down 35px, we want to offset this */
+  height: 0;
+  width: 0;
+  border-style: solid;
+  border-width: 17.5px 25px 0 25px; /* top right bottom left */
+  border-color: #e15349 transparent transparent transparent; /* top right bottom left */
+  z-index: 2; /* we want this to render infront of the page, when not hovering */
+  transform-origin: 0 0; /* change the point of rotation, so this element can be rotated about its x-axis at the "envelope hinge" */
+}
+
+/* ids below are for formatting the letter inside the envelope, and has been changed a little bit from the source*/
+#letter {
+  position: absolute;
+  bottom: 0px;
+  left: 5px; /* center the letter */
+  width: 40px;
+  height: 20px;
+  background: white;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#letterBorder {
+  height: 5px;
+  width: 100%;
+  background: repeating-linear-gradient(-45deg, #cb5a5e, #cb5a5e 4px, transparent 4px, transparent 7px);
+}
+
+#letterTitle {
+  margin-top: 5px;
+  margin-left: 5px;
+  height: 2px;
+  width: 0;  /* this will be animated out to 40%*/
+  background: #cb5a5e;
+}
+
+#letterContext {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  height: 2px;
+  width: 0;  /* this will be animated out to 20% */
+  background: #cb5a5e;
+}
+
+.letterContent { /* set up a class to repeat as content */
+  margin-top: 2px;
+  margin-left: 5px;
+  height: 2px;
+  width: 0; /* this will be animated out to 30 px */
+  background: #cb5a5e;
+}
+
+/* setup the animations on hover */
+#contactEmail:hover #topFold {
+  transition: transform .4s, z-index 0s linear .2s;
+  transform: rotateX(-180deg);
+  z-index: 0; /* now go behind the page */
+}
+
+#contactEmail:hover #emailIcon {
+  transition: top .4s;
+  top: 10px;
+}
+
+#contactEmail:hover #letter {
+  transition: height .4s ease .1s;
+  height: 60px;
+}
+
+#contactEmail:hover #letterTitle {
+  transition: width .4s ease-out .2s;
+  width: 40%;
+}
+
+#contactEmail:hover #letterContext {
+  transition: width .4s ease-out .3s;
+  width: 20%;
+}
+
+#contactEmail:hover .letterContent {
+  transition: width .6s ease-out .4s;
+  width: 30px;
+}
+
   /*                                                        */
- /* Setup the classes for the skill bars on the home page */
+ /* Setup the classes for the skill bars on the home page  */
 /*                                                        */
 .skills { /* this formats the whole skills table */
   width: 100%;
   font-weight: bold;
-  margin-bottom: 0.8em; /* add some spacing between table stacked ontop of each other */
+  margin-bottom: 0.8em; /* add some spacing between tables stacked on top of each other */
 }
 
 .skills {
