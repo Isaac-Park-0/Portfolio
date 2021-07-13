@@ -172,14 +172,17 @@ span.right {
 
 .contactRow {
   margin-bottom: 6em; /* add large spacing between rows */
+  height: 3em;
   display: grid;
   grid-template-columns: 5em 15em;
+  grid-template-rows: 3em; /* make sure the grid is the same height as the div */
 }
 
 .contactIcon {
   display: inline;
   float: left;
   padding: 0;
+  height: 100%;
 }
 
 .contactInfo {
@@ -241,6 +244,7 @@ span.right {
   background: white;
   overflow: hidden;
   z-index: 1;
+  text-align: left;
 }
 
 #letterBorder {
@@ -304,6 +308,33 @@ span.right {
 #contactEmail:hover .letterContent {
   transition: width .6s ease-out .4s;
   width: 30px;
+}
+  /*                                         */
+ /* setup the mobile icon and its animations */
+/*                                         */
+#mobileIcon {
+  height: 100%;
+  transform: translateY(-0.5em); /* center the middle of the phone to the center of the contact info */
+}
+
+#contactMobile:hover #mobileIcon{
+  animation: shake 1.3s ease-in-out infinite;
+  transform: translateY(-0.5em);
+}
+
+@keyframes shake {
+  0%  {transform: translateY(-0.5em) rotateZ(0);}
+  6% {transform: translateY(-0.5em) rotateZ(-10deg);}
+  12% {transform: translateY(-0.5em) rotateZ(10deg);}
+  18% {transform: translateY(-0.5em) rotateZ(-10deg);}
+  24% {transform: translateY(-0.5em) rotateZ(10deg);}
+  30% {transform: translateY(-0.5em) rotateZ(-10deg);}
+  36% {transform: translateY(-0.5em) rotateZ(10deg);}
+  42% {transform: translateY(-0.5em) rotateZ(-10deg);}
+  48% {transform: translateY(-0.5em) rotateZ(10deg);}
+  54% {transform: translateY(-0.5em) rotateZ(-10deg);}
+  60%{transform: translateY(-0.5em) rotateZ(0);}
+  100%{transform: translateY(-0.5em) rotateZ(0);}
 }
 
   /*                                                        */
