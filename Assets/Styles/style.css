@@ -114,34 +114,35 @@ header { /* this is for the titles on each page */
   text-align: center;
 }
 
-.contentIndex { /* This class is for the main content in the middle of the home page */
-  display: grid;
-  float: none;
-  grid-template-columns: 65% 35%;
-  padding: 1em;
-  margin: 2em auto;
-  max-width: 40em;
-  border-radius: 10px;
-  background-color: #242323;
-  color: white;
-  position: absolute;
-  top: 3em;
-  left: 0;
-  right: 0;
-  z: 1;
-
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* settings for box shadow taken from w3 schools - https://www.w3schools.com/css/css3_shadows_box.asp */
+span.right {
+  float: right;
+  color: #000;
 }
 
-#contentRight { /* this div contains the displayPic on the right side of the home page, and is used to position and size it */
-  padding-right: 3em;
-  padding-top: 1em;
+#contentIndex { /* This class is for the main content in the middle of the home page */
+  position: absolute;
+  top: 3em;
+  bottom: 10em;
+  right: 6em;
+  padding: 1em;
+  margin: 2em auto;
+  width: 40em;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #232323;
+}
+
+#contentRight { /* this div contains the displayPic, and is used to position and size it */
+  height: 45%;
+  text-align: center;
+}
+
+#contentLeft {
+  height: auto;
 }
 
 #displayPic { /* Setup the main picture on the index page */
-  width: 100%;
-  height: auto;
-  box-shadow: 0px 0px 10px 1px #e9ecf0;
+  width: auto;
+  height: 100%;
 }
 
 .content { /* defines the content formatting for the about and contact pages */
@@ -154,7 +155,7 @@ header { /* this is for the titles on each page */
   left: 0;
   right: 0;
   z: 1;
-  color: white;
+  color: #232323;
 }
 
 .title { /* this is needed to center align the titles on the contact and about pages */
@@ -176,27 +177,39 @@ header { /* this is for the titles on each page */
 .contactTitle { /* the contact details are presented in a table, this class is used on the left column */
   font-weight: bold;
   padding-right: 1em;
+  border-collapse: separate;
 }
 
   /*                                                        */
- /* Setup the classes for the skills bars on the home page */
+ /* Setup the classes for the skill bars on the home page */
 /*                                                        */
-#skills { /* this formats the whole skills block-element*/
+#skills { /* this formats the whole skills table */
   width: 100%;
-  padding-left: 2em;
-  padding-right: 8em;
   font-weight: bold;
+}
+
+#skills {
+  border-spacing: 10px;
+}
+
+
+#skills td {
+  width: 50%;/* force the columns to be the same width */
+}
+
+#skills td:nth-of-type(2) {
+  border-left: 100px; /* add a bit of padding to the second column to space the entries out a bit */
 }
 
 .progressBackground { /* this is for the background behind the progess bar */
   height: 0.7em;
   width: 100%;
-  background-color: #333;
+  background-color: #d7d8d3;
 }
 
-.progressBar { /* this forms tha progress bar itself */
+.progressBar { /* this forms the progress bar itself */
   height: 100%;
-  background-color: #fca311;
+  background-color: #000;
 }
 
   /*                                                                                                    */
