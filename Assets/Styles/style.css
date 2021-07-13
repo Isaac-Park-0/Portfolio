@@ -209,6 +209,7 @@ span.right {
   width: 50px;
   margin: 0 auto; /* with a defined height and width this will center the div */
   background-color: #333;
+  transition: top .4s ease .4s;
 }
 
 /* ids below are for the envelope, and are heavily edited from the source*/
@@ -232,6 +233,7 @@ span.right {
   border-color: #e15349 transparent transparent transparent; /* top right bottom left */
   z-index: 2; /* we want this to render infront of the page, when not hovering */
   transform-origin: 0 0; /* change the point of rotation, so this element can be rotated about its x-axis at the "envelope hinge" */
+  transition: transform .4s ease .4s, z-index 0s linear .6s;
 }
 
 /* ids below are for formatting the letter inside the envelope, and has been changed a little bit from the source*/
@@ -245,6 +247,7 @@ span.right {
   overflow: hidden;
   z-index: 1;
   text-align: left;
+  transition: height .4s ease .3s;
 }
 
 #letterBorder {
@@ -259,6 +262,7 @@ span.right {
   height: 2px;
   width: 0;  /* this will be animated out to 40%*/
   background: #cb5a5e;
+  transition: width .4s ease-out .2s;
 }
 
 #letterContext {
@@ -268,6 +272,7 @@ span.right {
   height: 2px;
   width: 0;  /* this will be animated out to 20% */
   background: #cb5a5e;
+  transition: width .4s ease-out .1s;
 }
 
 .letterContent { /* set up a class to repeat as content */
@@ -276,6 +281,7 @@ span.right {
   height: 2px;
   width: 0; /* this will be animated out to 30 px */
   background: #cb5a5e;
+  transition: width .6s ease-out;
 }
 
 /* setup the animations on hover */
@@ -315,11 +321,14 @@ span.right {
 #mobileIcon {
   height: 100%;
   transform: translateY(-0.5em); /* center the middle of the phone to the center of the contact info */
+  transition: .3s;
 }
 
 #contactMobile:hover #mobileIcon{
   animation: shake 1.3s ease-in-out infinite;
   transform: translateY(-0.5em);
+  height: 110%;
+  transition: .3s;
 }
 
 @keyframes shake {
@@ -344,6 +353,7 @@ span.right {
 #linkedinIcon {
   height: 90%;
   transform: translateY(-0.5em);
+  transition-duration: 0.5s;
 }
 
 #linkedinIconHover {
@@ -367,6 +377,7 @@ span.right {
   text-align: center;
   opacity: 0; /* hide the notification */
   transform: translate(-50% ,50%); /* translate the divs center to the top right hand corner of the icon */
+  transition-duration: 0.5s;
 }
 
 #contactLinkedin:hover #linkedinIcon {
@@ -377,6 +388,38 @@ span.right {
 #contactLinkedin:hover #linkedinNotification {
   transition-duration: 0.5s;
   opacity: 1;
+}
+
+  /*                                      */
+ /* setup the github icons and animation */
+/*                                      */
+
+#githubIcon {
+  position: relative;
+  left: 0;
+  height: 100%;
+  transform: translateY(-0.5em);
+  transition: 0.3s ease-in-out;
+}
+
+#githubText {
+  position: relative;
+  opacity: 0;
+  top: -100%;
+  left: -60%;
+  height: 100%;
+  transition: 0.3s ease-in-out;
+  transform: translateY(-0.5em);
+}
+
+#contactGithub:hover #githubText {
+  transition: 0.3s ease-in-out;
+  opacity: 1;
+}
+
+#contactGithub:hover #githubIcon {
+  transition: 0.3s ease-in-out;
+  left: -150%;
 }
 
   /*                                                        */
