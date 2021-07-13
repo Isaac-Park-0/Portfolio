@@ -102,6 +102,7 @@ main {
 
 .background, .background img {
   height: 100%;
+  max-height: calc(100vh - 4em); /* the footer is 4em in height */
 }
 
 a {
@@ -119,20 +120,18 @@ span.right {
   color: #000;
 }
 
-#contentIndex { /* This class is for the main content in the middle of the home page */
+.content { /* This class is for the main content in the middle of the home page */
   position: absolute;
-  top: 3em;
-  bottom: 10em;
+  top: 6em;
   right: 6em;
   padding: 1em;
-  margin: 2em auto;
   width: 40em;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.75);
   color: #232323;
 }
 
 #contentRight { /* this div contains the displayPic, and is used to position and size it */
-  height: 45%;
+  height: 24em;
   text-align: center;
 }
 
@@ -145,8 +144,8 @@ span.right {
   height: 100%;
 }
 
-.content { /* defines the content formatting for the about and contact pages */
-  float: none;
+/*.content { /* defines the content formatting for the about and contact pages */
+/*  float: none;
   padding: 1em;
   margin: 2em auto;
   max-width: 50em;
@@ -156,7 +155,7 @@ span.right {
   right: 0;
   z: 1;
   color: #232323;
-}
+}*/
 
 .title { /* this is needed to center align the titles on the contact and about pages */
   text-align: center;
@@ -174,9 +173,17 @@ span.right {
   transform: translateY(25%);
 }
 
+  /*                                            */
+ /* Format the calsses for the contact details */
+/*                                            */
+
+#contact { /* this id refernces the table containing the contact details*/
+  border-spacing: 0 1em;
+}
+
 .contactTitle { /* the contact details are presented in a table, this class is used on the left column */
   font-weight: bold;
-  padding-right: 1em;
+  float: right;
   border-collapse: separate;
 }
 
@@ -192,7 +199,6 @@ span.right {
 .skills {
   border-spacing: 1em 0;
 }
-
 
 .skills td {
   width: 50%;/* force the columns to be the same width */
@@ -214,11 +220,12 @@ span.right {
 /*                                                                                                    */
 
 .timeline {
+  position: absolute;
+  top: 0;
+  left: 0;
   margin-top: 2em;
   padding-left: 6em;
-  height: 100%;
   position: relative;
-  left: 0;
   width: auto;
   margin-left: 0em;
 }
@@ -228,9 +235,9 @@ span.right {
   position: absolute;
   left: -1em;
   transform: translate(-50%);
-  background-color: #333;
+  background-color: #d7d8d3;
   border-style: solid;
-  border-color: #fdfdfd;
+  border-color: #232323;
   border-width: 4px;
   border-radius: 50%;
   height: 0.5em;
@@ -239,17 +246,17 @@ span.right {
 
 .timelineEntry {
   position: relative;
-  color: #fff;
+  color: #232323;
   margin-bottom: 1em;
   cursor: pointer;
 }
 
 .timelineEntry:hover {
-  color: #fca311;
+  color: #333;
 }
 
 .timelineEntry:hover .timelineBody {
-  color: #fdfdfd;
+  color: #232323;
 }
 
 .timelineEntry::before { /* this pseudo-element forms the line */
@@ -257,19 +264,19 @@ span.right {
   position: absolute;
   left: -1em;
   bottom: -1em;/* each entry (except the last) has a 1em padding on the bottom */
-  background-color: #fdfdfd;
+  background-color: #232323;
   width: 4px;
   margin-right: 0em;
   transform: translate(-50%);
   height: 100%;
 }
 
-.timelineEntry:hover::before { /* this pseudo-element forms the line */
-  background-color: #fca311;
+.timelineEntry:hover::before { /* highlight the line on hover */
+  background-color: #333;
 }
 
-.timelineEntry:hover .timelineHeader::before { /* this changes the color of the dot when you hovber over the full entry */
-  border-color: #fca311;
+.timelineEntry:hover .timelineHeader::before { /* this changes the color of the dot when you hover over the full entry */
+  border-color: #333;
 }
 
 .timelineEntry:last-child { /* remove the bottom padding from the last entry */
@@ -286,14 +293,14 @@ span.right {
   left: -1em;
   transform: translate(-50%);
   border-style: solid;
-  border-color: #fdfdfd;
+  border-color: #232323;
   border-top-width: 2px;
   border-bottom-width: 0;
   width: 0.5em;
 }
 
 .timelineEntry:last-child:hover::after {
-  border-color: #fca311;
+  border-color: #333;
 }
 
 .timelineDate {
@@ -310,7 +317,8 @@ span.right {
 .timelineBody {
   display: none;
   max-width: 50em;
-  background-color: #252525;
+  background-color: #fff;
+  color: #232323;
   padding: 1em;
   margin-top: 0.25em;
   border-radius: 0.5em;
@@ -335,7 +343,7 @@ body {
 footer {
   width: 100%;
   height: auto;
-  background-color: #242323/*#242323*/;
+  background-color: #333;
   display: grid;
   align-items: center;
   text-align: center;
