@@ -106,7 +106,7 @@ main {
 
 a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 header { /* this is for the titles on each page */
@@ -183,22 +183,19 @@ span.right {
   /*                                                        */
  /* Setup the classes for the skill bars on the home page */
 /*                                                        */
-#skills { /* this formats the whole skills table */
+.skills { /* this formats the whole skills table */
   width: 100%;
   font-weight: bold;
+  margin-bottom: 0.8em; /* add some spacing between table stacked ontop of each other */
 }
 
-#skills {
-  border-spacing: 10px;
+.skills {
+  border-spacing: 1em 0;
 }
 
 
-#skills td {
+.skills td {
   width: 50%;/* force the columns to be the same width */
-}
-
-#skills td:nth-of-type(2) {
-  border-left: 100px; /* add a bit of padding to the second column to space the entries out a bit */
 }
 
 .progressBackground { /* this is for the background behind the progess bar */
