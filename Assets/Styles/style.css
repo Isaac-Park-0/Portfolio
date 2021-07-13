@@ -164,8 +164,27 @@ span.right {
  /* Format the calsses for the contact details */
 /*                                            */
 
-#contact { /* this id refernces the table containing the contact details */
-  border-spacing: 0 6em; /* add large spacing between rows */
+#contact { /* this is the wrapper div for the contact info */
+  width: 20em;
+  margin: 0 auto;
+  margin-top: 2em; /* Push the div away from the title */
+}
+
+.contactRow {
+  margin-bottom: 6em; /* add large spacing between rows */
+  display: grid;
+  grid-template-columns: 5em 15em;
+}
+
+.contactIcon {
+  display: inline;
+  float: left;
+  padding: 0;
+}
+
+.contactInfo {
+  display: inline;
+  text-align: left;
 }
 
 .contactTitle { /* the contact details are presented in a table, this class is used on the left column */

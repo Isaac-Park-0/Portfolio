@@ -20,29 +20,66 @@
 				Contact
 			</h1>
 			<center>
-				<table id='contact'>
-					<tr id='contactEmail'><td class="contactIcon">
-						<div id="emailIcon"> <!--setup some divs to create the email image based offf of code from https://codepen.io/jakegilesphillips/pen/MveNLe-->
-							<div id="envelopeBody"></div>
-							<div id="topFold"></div>
-							<div id="letter">
-								<div id="letterBorder"></div>
-								<div id="letterTitle"></div>
-								<div id="letterContext"></div>
-								<div id="letterStamp"></div>
-								<div class="letterContent"></div>
-								<div class="letterContent"></div>
-								<div class="letterContent"></div>
-								<div class="letterContent"></div>
-								<div class="letterContent"></div>
-							</div>
-						<div>
-					</td>
-					<td><a href="mailto:Parki10@outlook.com"><span class="contactTitle">You can email me at</span><br />Parki10@outlook.com</a></td></tr>
-					<tr><td class="contactIcon">image</td><td><a href="tel:0450540056"><span class="contactTitle">Call me on</span><br />0450540056</td></tr>
-					<tr><td class="contactIcon">image</td><td><a href="https://www.linkedin.com/in/isaac-park-0/" target="_blank"><span class="contactTitle">Message me on linkedin</span><br />linkedin.com/in/isaac-park-0</a></td></tr>
-					<tr><td class="contactIcon">image</td><td><a href="https://github.com/Isaac-Park-0" target="_blank"><span class="contactTitle">View my respository at</span><br />github.com/Isaac-Park-0</a></td></tr>
-				</table>
+				<div id='contact'>
+					<a href="mailto:Parki10@outlook.com">
+						<div id='contactEmail' class='contactRow'>
+							<div class="contactIcon">
+								<div id="emailIcon"> <!--setup some divs to create the email image based offf of code from https://codepen.io/jakegilesphillips/pen/MveNLe-->
+									<div id="envelopeBody"></div>
+									<div id="topFold"></div>
+									<div id="letter">
+										<div id="letterBorder"></div>
+										<div id="letterTitle"></div>
+										<div id="letterContext"></div>
+										<div id="letterStamp"></div>
+										<div class="letterContent"></div>
+										<div class="letterContent"></div>
+										<div class="letterContent"></div>
+										<div class="letterContent"></div>
+										<div class="letterContent"></div>
+									</div><!--Closes the letter-->
+								</div><!--Closes emailIcon-->
+							</div><!--Closes contactIcon-->
+							<div class='contactInfo'>
+								<span class="contactTitle">You can email me at</span><br />
+								Parki10@outlook.com
+							</div><!--Closes contactInfo-->
+						</div><!--Closes the contactEmail row-->
+					</a>
+					<a href="tel:0450540056">
+						<div id='contactMobile' class='contactRow'>
+							<div class="contactIcon">
+								image
+							</div><!--closes contactIcon-->
+							<div class='contactInfo'>
+								<span class="contactTitle">Call me on</span><br />
+								0450540056
+							</div><!--closes contactInfo-->
+						</div><!--closes contactMobile-->
+					</a>
+					<a href="https://www.linkedin.com/in/isaac-park-0/" target="_blank">
+						<div id='contactLinkedin' class='contactRow'>
+							<div class="contactIcon">
+								image
+							</div><!--Closes contactIcon-->
+							<div class='contactInfo'>
+								<span class="contactTitle">Message me on linkedin</span><br />
+								linkedin.com/in/isaac-park-0
+							</div><!--closes contactInfo-->
+						</div><!--closes contactLinkedin-->
+					</a>
+					<a href="https://github.com/Isaac-Park-0" target="_blank">
+						<div id='contactGithub' class='contactRow'>
+							<div class="contactIcon">
+								image
+							</div><!--Closes contactIcon-->
+							<div class='contactInfo'>
+								<span class="contactTitle">View my respository at</span><br />
+								github.com/Isaac-Park-0
+							</div><!--Closes contactInfo-->
+						</div><!--Closes contactGithub-->
+					</a>
+				</div><!--Closes the contact div-->
 			</center>
 		</div>
 		<div class='background'>
