@@ -177,13 +177,12 @@ span.right {
  /* Format the calsses for the contact details */
 /*                                            */
 
-#contact { /* this id refernces the table containing the contact details*/
-  border-spacing: 0 1em;
+#contact { /* this id refernces the table containing the contact details */
+  border-spacing: 0 6em;
 }
 
 .contactTitle { /* the contact details are presented in a table, this class is used on the left column */
   font-weight: bold;
-  float: right;
   border-collapse: separate;
 }
 
@@ -358,7 +357,7 @@ footer li {
   display: inline;
 }
 
-.contactIcon {
+.footerIcon {
   width: 2em;
   height: 2em;
 }
