@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.0"
+   width="960.000000pt"
+   height="961.000000pt"
+   viewBox="0 0 960.000000 961.000000"
+   preserveAspectRatio="xMidYMid meet"
+   id="svg6"
+   sodipodi:docname="linkedinIconHover.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs10" />
+  <sodipodi:namedview
+     id="namedview8"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="pt"
+     showgrid="false"
+     inkscape:zoom="0.1767767"
+     inkscape:cx="-517.60216"
+     inkscape:cy="234.75945"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg6" />
+  <g
+     transform="translate(0.000000,961.000000) scale(0.100000,-0.100000)"
+     fill="#000000"
+     stroke="none"
+     id="g4">
+    <path
+       d="M 2700,9610 C 1300.0234,9610.0205 -0.01786042,8309.9943 0,6910 V 2710 C -0.04341491,1010.087 1300.0047,9.9710035 2700,10 h 4200 c 1700.0448,0.04748 2699.976,1000.0702 2700,2700 v 4200 c 0.021,1400.0754 -999.9391,2700.0179 -2700,2700 z m 383,-1869 c 105,-27 169,-57 235,-108 147,-114 232,-291 234,-484 2,-325 -258,-570 -622,-586 -207,-10 -373,45 -502,166 -121,113 -176,229 -185,392 -18,306 155,539 458,619 103,26 279,27 382,1 z M 6545,6145 c 281,-45 493,-150 676,-334 222,-222 337,-484 396,-896 13,-93 17,-280 20,-1207 l 4,-1098 h -580 -581 v 953 c 0,1156 -4,1208 -99,1402 -104,209 -290,300 -559,274 -199,-20 -387,-154 -492,-351 -59,-110 -60,-130 -60,-1260 V 2610 h -579 -579 l 2,1740 1,1740 575,-2 575,-3 3,-243 2,-243 62,83 c 187,255 438,412 738,463 105,18 365,18 475,0 z m -3067,-1797 2,-1738 h -580 -580 v 1740 1740 l 578,-2 577,-3 z"
+       id="path2"
+       sodipodi:nodetypes="ccccccccccccccccccccccccscccsccccccccccccccccccccc"
+       style="fill:#cb5a5e;fill-opacity:1" />
+  </g>
+</svg>

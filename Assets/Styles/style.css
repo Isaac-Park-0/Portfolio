@@ -309,9 +309,9 @@ span.right {
   transition: width .6s ease-out .4s;
   width: 30px;
 }
-  /*                                         */
+  /*                                          */
  /* setup the mobile icon and its animations */
-/*                                         */
+/*                                          */
 #mobileIcon {
   height: 100%;
   transform: translateY(-0.5em); /* center the middle of the phone to the center of the contact info */
@@ -335,6 +335,48 @@ span.right {
   54% {transform: translateY(-0.5em) rotateZ(-10deg);}
   60%{transform: translateY(-0.5em) rotateZ(0);}
   100%{transform: translateY(-0.5em) rotateZ(0);}
+}
+
+  /*                         */
+ /* setup the linkedin icon */
+/*                         */
+
+#linkedinIcon {
+  height: 90%;
+  transform: translateY(-0.5em);
+}
+
+#linkedinIconHover {
+  position: relative;
+  top: calc(-100% + 1px); /* note sure why (might be a rounding thing) but the background image was sitting one pixel too high */
+  height: 90%;
+  transform: translateY(-0.5em);
+}
+
+#linkedinNotification {
+  position: relative;
+  top: -250%; /*-200% to center the div back, another -50% to move the div to the top */
+  left: 50%; /*move the div out of the center to the right edge*/
+  border-radius: 50%;
+  height: 1.2em;
+  width: 1.2em;
+  background-color: #f84f31;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  opacity: 0; /* hide the notification */
+  transform: translate(-50% ,50%); /* translate the divs center to the top right hand corner of the icon */
+}
+
+#contactLinkedin:hover #linkedinIcon {
+  transition-duration: 0.5s;
+  opacity: 0;
+}
+
+#contactLinkedin:hover #linkedinNotification {
+  transition-duration: 0.5s;
+  opacity: 1;
 }
 
   /*                                                        */
