@@ -4,6 +4,11 @@
 	font-family: arial;/*set defualt font to arial*/
 }
 
+:root {/* code from  https://www.w3schools.com/css/css3_variables.asp */
+  --active: #c19770;/* green: 1fb622, blue: 2fbeee, red: e15349 */
+  --timelineBack: #fff;/* green: cff0c5, blue: 8ce2ff, silver: #aaa */
+}
+
   /*                           */
  /* format the navigation bar */
 /*                           */
@@ -102,13 +107,15 @@ main {
   z-index: 0;/* show behind everything else */
 }
 
-.background, .background img {
-  height: 100%;
-  max-height: calc(100vh - 4em); /* the footer is 4em in height */
+.background {
+  position: relative;
+  height: calc(100vh - 4em); /* the footer is 4em in height */
 }
 
 .background img {
   position: relative;
+  height: calc(100vh - 4em);
+  width: auto;
   pointer-events: none; /* make sure the background or mask-image won't cover the nav links */
   z-index: -1; /* this forces the linear gradient to render behind the contents on top of the background */
   mask-type: alpha;
@@ -127,13 +134,12 @@ header { /* this is for the titles on each page */
 
 span.right {
   float: right;
-  color: #000;
+  color: var(--active);
 }
 
 .content { /* This class is for the main content on each page */
-  position: absolute;
+  position: absolute; /* left and right positioning is set with inline styling, as each page has different positions */
   top: 6em;
-  right: 6em;
   padding: 1em;
   width: 40em;
   background-color: rgba(255, 255, 255, 0.75);
@@ -174,6 +180,8 @@ span.right {
   width: 20em;
   margin: 0 auto;
   margin-top: 2em; /* Push the div away from the title */
+  position: relative;
+  z-index: 1;
 }
 
 .contactRow {
@@ -453,7 +461,7 @@ span.right {
 
 .progressBar { /* this forms the progress bar itself */
   height: 100%;
-  background-color: #000;
+  background-color: var(--active);
 }
 
   /*                                                                                                    */
@@ -540,7 +548,7 @@ span.right {
 .timelineBody {
   display: none;
   max-width: 50em;
-  background-color: #fff;
+  background-color: var(--timelineBack);
   color: #232323;
   padding: 1em;
   margin-top: 0.25em;
@@ -548,18 +556,18 @@ span.right {
 }
 
 .timelineEntry:hover::before { /* highlight the line on hover */
-  background-color: #eee;
+  background-color: var(--active);
 }
 
 .timelineEntry:hover .timelineHeader::before/*dot*/, .timelineEntry:last-child:hover::after/*end cap*/ {
-  border-color: #eee;
+  border-color: var(--active);
 }
 
 .timelineEntry:hover {
-  color: #eee;
+  color: var(--active);
 }
 
-.timelineEntry:hover .timelineBody { /*chnage the color fo the body back so it isn'y affected on hover*/
+.timelineEntry:hover .timelineBody { /*change the color for the body back so it isn't affected on hover*/
   color: #232323;
 }
 

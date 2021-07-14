@@ -15,7 +15,7 @@
 		</ul>
 	</nav>
 	<main>
-		<div class="content" style="left: 6em; right: unset;">
+		<div class="content" style="top:6em; left: 8em; width: 51em;">
 			<h1 class='title' style="transform: translate(-2em);"><!--The profile picture is 2em wide, so we have to offset the title 2em left to center the text properly-->
 				<img id='profilePic' src='Assets/Images/isaacProfilePicture.png'>About Me
 			</h1><br/>
@@ -88,12 +88,12 @@
 				</div>
 			</div><!--close the timeline div-->
 		</div><!--closes div for content-->
-		<script src='Assets/Scripts/timeline.js' type='text/javascript'></script><!--This script handles the hide/show functionality for the timeline-->
 		<div class='background'>
 			<img src="Assets/Images/laptopCode.jpg" style="float: right;
   														   mask-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0));
   														   -webkit-mask-image: -webkit-linear-gradient(right, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);"><!--Mask image creates a fade out gradient across the image, each page needs a unique mask image so it is done with inline styling-->
 		</div>
+		<script src='Assets/Scripts/timeline.js' type='text/javascript'></script><!--This script handles the hide/show functionality for the timeline, and expands the background when needed-->
 	</main>
 	<footer id='foot'>
 		<div id='links'>

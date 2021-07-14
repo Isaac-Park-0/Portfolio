@@ -20,8 +20,7 @@ function updateContentDisplay(activeIndex) {
 			}
 			else {
 				body.style.display="block"; /* if the object wasn't displayed when it was click on we want to show it */
-			}; 
-			//timelineEntries[i].classList.toggle("active");
+			};
 		}
 		else {
 			body.style.display="none"; /* hide timeline entries that weren't clicked on */
