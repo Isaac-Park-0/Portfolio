@@ -120,7 +120,7 @@ span.right {
   color: #000;
 }
 
-.content { /* This class is for the main content in the middle of the home page */
+.content { /* This class is for the main content on each page */
   position: absolute;
   top: 6em;
   right: 6em;
@@ -130,12 +130,12 @@ span.right {
   color: #232323;
 }
 
-#contentRight { /* this div contains the displayPic, and is used to position and size it */
+#contentPicture { /* this div contains the displayPic, and is used to position and size it */
   height: 24em;
   text-align: center;
 }
 
-#contentLeft {
+#contentSkills {
   height: auto;
 }
 
