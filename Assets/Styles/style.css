@@ -5,7 +5,7 @@
 }
 
 :root {/* code from  https://www.w3schools.com/css/css3_variables.asp */
-  --active: #c19770;/* green: 1fb622, blue: 2fbeee, red: e15349 */
+  --active: #232323;/* green: 1fb622, blue: 2fbeee, red: e15349 */
   --timelineBack: #fff;/* green: cff0c5, blue: 8ce2ff, silver: #aaa */
 }
 
@@ -25,7 +25,7 @@ nav ul {
   list-style-type: none;
   float: right;
   height: 100%;
-  margin-right: 2em; /* add a margin on the right of the navigaion menu so the nav items don't sit right next to the edge of the screen */
+  margin-right: 2em; /* add a margin on the right of the navigation menu so the nav items don't sit right next to the edge of the screen */
 }
 
 nav li {
