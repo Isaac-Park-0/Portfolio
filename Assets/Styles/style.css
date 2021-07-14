@@ -478,7 +478,7 @@ span.right {
   position: absolute;
   left: -1em;
   transform: translate(-50%);
-  background-color: #d7d8d3;
+  background-color: #fff;
   border-style: solid;
   border-color: #232323;
   border-width: 4px;
@@ -494,14 +494,6 @@ span.right {
   cursor: pointer;
 }
 
-.timelineEntry:hover {
-  color: #333;
-}
-
-.timelineEntry:hover .timelineBody {
-  color: #232323;
-}
-
 .timelineEntry::before { /* this pseudo-element forms the line */
   content: '';
   position: absolute;
@@ -512,14 +504,6 @@ span.right {
   margin-right: 0em;
   transform: translate(-50%);
   height: 100%;
-}
-
-.timelineEntry:hover::before { /* highlight the line on hover */
-  background-color: #333;
-}
-
-.timelineEntry:hover .timelineHeader::before { /* this changes the color of the dot when you hover over the full entry */
-  border-color: #333;
 }
 
 .timelineEntry:last-child { /* remove the bottom padding from the last entry */
@@ -542,10 +526,6 @@ span.right {
   width: 0.5em;
 }
 
-.timelineEntry:last-child:hover::after {
-  border-color: #333;
-}
-
 .timelineDate {
   font-weight: bold;
   font-size: 10pt;
@@ -565,6 +545,22 @@ span.right {
   padding: 1em;
   margin-top: 0.25em;
   border-radius: 0.5em;
+}
+
+.timelineEntry:hover::before { /* highlight the line on hover */
+  background-color: #eee;
+}
+
+.timelineEntry:hover .timelineHeader::before/*dot*/, .timelineEntry:last-child:hover::after/*end cap*/ {
+  border-color: #eee;
+}
+
+.timelineEntry:hover {
+  color: #eee;
+}
+
+.timelineEntry:hover .timelineBody { /*chnage the color fo the body back so it isn'y affected on hover*/
+  color: #232323;
 }
 
   /*                                                               */
