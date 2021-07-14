@@ -98,11 +98,18 @@ html, body {
 
 main {
   background-color: #d7d8d3;
+  z-index: -999;/* show behind everything else */
 }
 
 .background, .background img {
   height: 100%;
   max-height: calc(100vh - 4em); /* the footer is 4em in height */
+}
+
+.background img {
+  position: relative;
+  pointer-events: none; /* make sure the background or mask-image won't cover the nav links */
+  z-index: -1; /* this forces the linear gradient to render behind the contents on top of the background */
 }
 
 a {
@@ -135,10 +142,6 @@ span.right {
   text-align: center;
 }
 
-#contentSkills {
-  height: auto;
-}
-
 #displayPic { /* Setup the main picture on the index page */
   width: auto;
   height: 100%;
@@ -161,7 +164,7 @@ span.right {
 }
 
   /*                                            */
- /* Format the calsses for the contact details */
+ /* Format the classes for the contact details */
 /*                                            */
 
 #contact { /* this is the wrapper div for the contact info */

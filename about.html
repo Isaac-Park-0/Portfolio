@@ -90,7 +90,9 @@
 		</div><!--closes div for content-->
 		<script src='Assets/Scripts/timeline.js' type='text/javascript'></script><!--This script handles the hide/show functionality for the timeline-->
 		<div class='background'>
-			<img src="Assets/Images/laptopCode.jpg" style="float: right;">
+			<img src="Assets/Images/laptopCode.jpg" style="float: right;
+  														   mask-image: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,0));
+  														   -webkit-mask-image: -webkit-linear-gradient(right, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);"><!--Mask image creates a fade out gradient across the image, each page needs a unique mask image so it is done with inline styling-->
 		</div>
 	</main>
 	<footer id='foot'>
