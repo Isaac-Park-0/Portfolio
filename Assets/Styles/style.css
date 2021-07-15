@@ -5,8 +5,8 @@
 }
 
 :root {/* code from  https://www.w3schools.com/css/css3_variables.asp */
-  --active: #232323;/* green: 1fb622, blue: 2fbeee, red: e15349 */
-  --timelineBack: #fff;/* green: cff0c5, blue: 8ce2ff, silver: #aaa */
+  --active: #2fbeee;/* green: 1fb622, blue: 2fbeee, red: e15349 */
+  --timelineBack: #8ce2ff;/* green: cff0c5, blue: 8ce2ff, silver: #aaa */
 }
 
   /*                           */
@@ -222,7 +222,7 @@ span.right {
   height: 35px;
   width: 50px;
   margin: 0 auto; /* with a defined height and width this will center the div */
-  background-color: #333;
+  background-color: #232323;
   transition: top .4s ease .4s;
 }
 
@@ -233,7 +233,7 @@ span.right {
   width: 0;
   border-style: solid;
   border-width: 17.5px 25px 17.5px 25px; /* top right bottom left */
-  border-color: transparent #e15349 #e15349 #e15349; /* top right bottom left */
+  border-color: transparent var(--active) var(--active) var(--active); /* top right bottom left */
   z-index: 2; /* we want this to render infront of the page */
 }
 
@@ -244,7 +244,7 @@ span.right {
   width: 0;
   border-style: solid;
   border-width: 17.5px 25px 0 25px; /* top right bottom left */
-  border-color: #e15349 transparent transparent transparent; /* top right bottom left */
+  border-color: var(--active) transparent transparent transparent; /* top right bottom left */
   z-index: 2; /* we want this to render infront of the page, when not hovering */
   transform-origin: 0 0; /* change the point of rotation, so this element can be rotated about its x-axis at the "envelope hinge" */
   transition: transform .4s ease .4s, z-index 0s linear .6s;
@@ -267,7 +267,7 @@ span.right {
 #letterBorder {
   height: 5px;
   width: 100%;
-  background: repeating-linear-gradient(-45deg, #cb5a5e, #cb5a5e 4px, transparent 4px, transparent 7px);
+  background: repeating-linear-gradient(-45deg, var(--active), var(--active) 4px, transparent 4px, transparent 7px);
 }
 
 #letterTitle {
@@ -275,7 +275,7 @@ span.right {
   margin-left: 5px;
   height: 2px;
   width: 0;  /* this will be animated out to 40%*/
-  background: #cb5a5e;
+  background: var(--active);
   transition: width .4s ease-out .2s;
 }
 
@@ -285,7 +285,7 @@ span.right {
   margin-left: 5px;
   height: 2px;
   width: 0;  /* this will be animated out to 20% */
-  background: #cb5a5e;
+  background: var(--active);
   transition: width .4s ease-out .1s;
 }
 
@@ -294,7 +294,7 @@ span.right {
   margin-left: 5px;
   height: 2px;
   width: 0; /* this will be animated out to 30 px */
-  background: #cb5a5e;
+  background: var(--active);
   transition: width .6s ease-out;
 }
 

@@ -1,3 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="143.76 49.99999999999999 222.48000000000002 411.99999999999994">
-  <path d="M366.24,82.96c0-18.202-14.758-32.96-32.96-32.96H176.72c-18.202,0-32.96,14.758-32.96,32.96v346.08  c0,18.202,14.758,32.96,32.96,32.96h156.56c18.202,0,32.96-14.758,32.96-32.96V82.96z M238.653,87.08h32.959  c2.277,0,4.12,1.845,4.12,4.12c0,2.275-1.843,4.12-4.12,4.12h-32.959c-2.275,0-4.12-1.845-4.12-4.12  C234.533,88.925,236.378,87.08,238.653,87.08z M253.761,442.494c-9.101,0-16.486-7.379-16.486-16.479  c0-9.102,7.385-16.48,16.486-16.48c9.101,0,16.472,7.379,16.472,16.48C270.233,435.115,262.862,442.494,253.761,442.494z   M345.64,396.08H164.36V120.04h181.28V396.08z" fill="#e15349"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="143.76 49.99999999999999 222.48000000000002 411.99999999999994"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="iphoneIcon.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="2.0194175"
+     inkscape:cx="115.6274"
+     inkscape:cy="212.1899"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <path
+     d="M366.24,82.96c0-18.202-14.758-32.96-32.96-32.96H176.72c-18.202,0-32.96,14.758-32.96,32.96v346.08  c0,18.202,14.758,32.96,32.96,32.96h156.56c18.202,0,32.96-14.758,32.96-32.96V82.96z M238.653,87.08h32.959  c2.277,0,4.12,1.845,4.12,4.12c0,2.275-1.843,4.12-4.12,4.12h-32.959c-2.275,0-4.12-1.845-4.12-4.12  C234.533,88.925,236.378,87.08,238.653,87.08z M253.761,442.494c-9.101,0-16.486-7.379-16.486-16.479  c0-9.102,7.385-16.48,16.486-16.48c9.101,0,16.472,7.379,16.472,16.48C270.233,435.115,262.862,442.494,253.761,442.494z   M345.64,396.08H164.36V120.04h181.28V396.08z"
+     fill="#e15349"
+     id="path2"
+     style="fill:#2fbeee;fill-opacity:1" />
 </svg>
