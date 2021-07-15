@@ -110,6 +110,8 @@ main {
 .background {
   position: relative;
   height: calc(100vh - 4em); /* the footer is 4em in height */
+  width: 100vw;
+  overflow: hidden;
 }
 
 .background img {
@@ -256,7 +258,7 @@ span.right {
   bottom: 0px;
   left: 5px; /* center the letter */
   width: 40px;
-  height: 20px;
+  height: 15px;
   background: #eee;
   overflow: hidden;
   z-index: 1;
