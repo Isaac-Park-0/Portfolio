@@ -103,16 +103,6 @@ html, body {
   min-height: 960px;
 }
 
-img:not(#githubText) {
-  animation: fadeIn .5s;
-  transition: ease-out;
-}
-
-@keyframes fadeIn {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
-}
-
 main {
   background-color: #d7d8d3;
   z-index: 0;/* show behind everything else */
@@ -236,7 +226,6 @@ span.right {
   width: 50px;
   margin: 0 auto; /* with a defined height and width this will center the div */
   background-color: #232323;
-  animation: fadeIn .5s;
   transition: top .4s ease .4s;
 }
 
